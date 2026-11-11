@@ -31,7 +31,7 @@ Explanation: All elements are distinct, so no duplicate exists.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T15:20:39.963Z  
+**Submitted:** 2026-11-11T15:20:49.490Z  
 
 ```cpp
 #include <vector>
