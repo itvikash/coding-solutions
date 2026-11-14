@@ -31,7 +31,7 @@ Explanation: It is not possible to make the sums of all three stacks equal by re
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-14T06:29:31.980Z  
+**Submitted:** 2026-11-14T06:29:41.765Z  
 
 ```cpp
 #include <vector>
