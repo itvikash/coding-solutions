@@ -26,43 +26,19 @@ Explanation: The non-empty subsequences are: [4], [0], [5], [4, 0], [4, 5], [0, 
 
 ## Solution
 
-**Language:** C++  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-15T04:07:18.559Z  
+**Submitted:** 2026-11-15T04:08:07.187Z  
 
-```cpp
-#include <string>
-
-using namespace std;
-
-class Solution {
-private:
-    long long power(long long base, long long exp) {
-        long long res = 1;
-        base %= 1000000007;
-        while (exp > 0) {
-            if (exp % 2 == 1) res = (res * base) % 1000000007;
-            base = (base * base) % 1000000007;
-            exp /= 2;
-        }
-        return res;
-    }
-
-public:
-    long long subsequenceSum(string s) {
-        long long MOD = 1000000007;
-        long long sum_digits = 0;
-        int n = s.length();
-
-        for (char c : s) {
-            sum_digits = (sum_digits + (c - '0')) % MOD;
-        }
-
-        long long total_sum = (sum_digits * power(2, n - 1)) % MOD;
-        return total_sum;
-    }
-};
+```py
+class Solution:
+    def subsequenceSum(self, s: str) -> int:
+        MOD = 1000000007
+        sum_digits = sum(int(c) for c in s) % MOD
+        n = len(s)
+        total_sum = (sum_digits * pow(2, n - 1, MOD)) % MOD
+        return total_sum
 ```
 
 ---
